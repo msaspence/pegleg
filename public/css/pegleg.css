@@ -1,0 +1,28 @@
+.index-page {
+  margin-top: 30px;
+}
+  .index-page form {
+    margin: 30px 0;
+  }
+
+    .index-page form input[type=search] {
+      width: 350px;
+      margin-right: 10px;
+    }
+
+.search-page {
+  margin-top: 20px;
+}
+
+  .search-page form {
+    float: right;
+  }
+
+  .search-page .description {
+    font-size: 16px;
+    margin-top: 7px;
+  }
+
+    .search-page form input[type=search] {
+      width: 300px;
+    }

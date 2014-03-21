@@ -1,0 +1,45 @@
+!!!
+%html
+  %head
+    %title Pegleg
+    = css :application
+
+  %body
+    .search-page.container
+      .row
+        .col-md-12
+
+          %form.form-inline{ role: 'form', action: '/search' }
+
+            .form-group
+              %input#q.form-control{ type: 'search', name: 'q', placeholder: 'What ye be looking for?' }
+
+              %button.btn.btn-primary{ type: "submit" }
+                Submit
+
+          %p.description
+            - if @results.size > 0
+              Ye be looking for <strong>"#{@q}"</strong>, 'eres what I be finding for ya...
+            - else
+              Sorry I couldn't be finding any results for <strong>"#{@q}"</strong>
+
+          - if @results.size > 0
+            %table.table.table-striped
+              %thead
+                %tr
+                  %th
+                    Title
+                  %th
+                    Seeders
+                  %th
+                    Leachers
+              %tbody
+                - @results.each do |result|
+                  %tr
+                    %td
+                      %a{ href: result.url }
+                        = result.title
+                    %td
+                      = result.seeds
+                    %td
+                      = result.leachers

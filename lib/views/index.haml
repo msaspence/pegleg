@@ -1,0 +1,24 @@
+!!!
+%html
+  %head
+    %title Pegleg
+    = css :application
+
+  %body
+    .container.index-page
+      .row
+        .col-md-12
+        .jumbotron
+          %h1 AAARRRRRR!!!!
+          %p
+            Be ye lookin' fer th' Pirate Bay but ye ISP has blocked it?
+          .container-fluid
+            .row-fluid
+              .col-md-6.col-md-offset-3
+                %form.form-inline{ role: 'form', action: '/search' }
+
+                  .form-group
+                    %input#q.form-control.input-lg{ type: 'search', name: 'q', placeholder: 'What ye be looking for?' }
+
+                    %button.btn.btn-primary.btn-lg{ type: "submit" }
+                      Submit
